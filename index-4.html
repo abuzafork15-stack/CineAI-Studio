@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>CineAI Studio — Free AI Video Planner</title>
+<style>
+:root{--bg:#0b1020;--panel:#141d30;--panel2:#1b2940;--text:#eef4ff;--muted:#a8b6cc;--accent:#7c5cff;--accent2:#26d9c2;--border:#2a3a55}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top right,#1a2450 0,#0b1020 42%);color:var(--text);line-height:1.55}
+main{max-width:850px;margin:auto;padding:22px 16px 48px}.brand{display:flex;align-items:center;gap:12px;margin:6px 0 22px}.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-size:24px;font-weight:900;color:#07111f}.brand h1{font-size:1.35rem;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.hero{padding:25px 20px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(135deg,#192641,#111827);margin-bottom:18px}.tag{display:inline-block;background:#253454;color:#c8d6ff;padding:5px 10px;border-radius:99px;font-size:.78rem}.hero h2{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.15;margin:14px 0 10px}.hero p{color:var(--muted);margin:0}
+.card{background:rgba(20,29,48,.94);border:1px solid var(--border);border-radius:18px;padding:20px;margin:16px 0}.card h3{margin:0 0 14px;font-size:1.1rem}label{display:block;font-weight:650;margin:13px 0 6px}input,select,textarea{width:100%;background:#0b1322;color:var(--text);border:1px solid #354663;border-radius:11px;padding:12px 13px;font:inherit}textarea{min-height:105px;resize:vertical}input:focus,select:focus,textarea:focus{outline:2px solid var(--accent)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}button{border:0;border-radius:11px;padding:12px 16px;font:inherit;font-weight:750;cursor:pointer}.primary{background:linear-gradient(135deg,var(--accent),#5944df);color:white}.secondary{background:#263750;color:var(--text);border:1px solid #3b4d69}.result{white-space:pre-wrap;min-height:150px;background:#0a1220;border:1px solid #354663;border-radius:12px;padding:14px;color:#e4edff;overflow-wrap:anywhere}.hint{color:var(--muted);font-size:.9rem}.status{color:var(--accent2);min-height:1.4em;font-size:.9rem}footer{text-align:center;color:var(--muted);font-size:.82rem;padding:14px}
+@media(max-width:580px){.grid{grid-template-columns:1fr}.hero{padding:21px 17px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <div class="logo">C</div>
+    <div><h1>CineAI Studio</h1><p>তোমার আইডিয়া থেকে ভিডিওর পরিকল্পনা</p></div>
+  </header>
+
+  <section class="hero">
+    <span class="tag">FREE • বাংলা • মোবাইল-ফ্রেন্ডলি</span>
+    <h2>ভিডিও বানানোর পরিকল্পনা তৈরি করো সহজে</h2>
+    <p>বিষয়, দৈর্ঘ্য ও স্টাইল বেছে নাও। এই টুল তোমার জন্য স্ক্রিপ্ট-প্রম্পট, দৃশ্যের পরিকল্পনা এবং এডিটিং নির্দেশনা তৈরি করবে।</p>
+  </section>
+
+  <section class="card">
+    <h3>১. ভিডিওর তথ্য দাও</h3>
+    <label for="topic">ভিডিওর বিষয়</label>
+    <input id="topic" value="শূন্য থেকে সফল হওয়ার ৫টি অভ্যাস" placeholder="যেমন: সময়ের সঠিক ব্যবহার">
+    <div class="grid">
+      <div><label for="duration">ভিডিওর দৈর্ঘ্য</label><select id="duration"><option>৩০ সেকেন্ড</option><option>১ মিনিট</option><option selected>৬ মিনিট</option><option>৮ মিনিট</option><option>১০ মিনিট</option></select></div>
+      <div><label for="type">ভিডিওর ধরন</label><select id="type"><option selected>বাংলা মোটিভেশন</option><option>শিক্ষামূলক</option><option>গল্প</option><option>ব্যবসা ও অর্থনীতি</option><option>ইউটিউব টিপস</option><option>গেমিং</option></select></div>
+    </div>
+    <div class="grid">
+      <div><label for="voice">ভয়েসের ধরন</label><select id="voice"><option selected>গভীর, শক্তিশালী পুরুষ কণ্ঠ</option><option>শান্ত ও বন্ধুত্বপূর্ণ কণ্ঠ</option><option>উদ্দীপনামূলক তরুণ কণ্ঠ</option><option>নারী কণ্ঠ</option><option>ভয়েসওভার লাগবে না</option></select></div>
+      <div><label for="visual">ভিজ্যুয়াল স্টাইল</label><select id="visual"><option selected>সিনেমাটিক ডার্ক টিল</option><option>উজ্জ্বল ও পরিষ্কার</option><option>অ্যানিমে</option><option>২D কার্টুন</option><option>বাস্তব ফুটেজ</option></select></div>
+    </div>
+    <label for="audience">দর্শক</label><input id="audience" value="বাংলাদেশের তরুণ ও শিক্ষার্থী" placeholder="কারা ভিডিওটি দেখবে?">
+    <label for="notes">অতিরিক্ত নির্দেশনা (ঐচ্ছিক)</label><textarea id="notes" placeholder="যেমন: সহজ বাংলা, শক্তিশালী শুরু, শেষে সাবস্ক্রাইব করতে বলা"></textarea>
+    <div class="buttons"><button class="primary" id="make">প্রম্পট তৈরি করো</button><button class="secondary" id="reset" type="button">নতুন করে শুরু</button></div>
+  </section>
+
+  <section class="card">
+    <h3>২. তৈরি হওয়া প্রম্পট</h3>
+    <p class="hint">প্রম্পটটি কপি করে Gemini বা অন্য AI চ্যাটে পেস্ট করলে স্ক্রিপ্ট ও দৃশ্যের পরিকল্পনা চাইতে পারবে।</p>
+    <div class="result" id="result" aria-live="polite">এখানে তোমার প্রম্পট দেখা যাবে।</div>
+    <div class="buttons"><button class="primary" id="copy">প্রম্পট কপি করো</button><button class="secondary" id="gemini">Gemini খোলো</button></div>
+    <p class="status" id="status" role="status"></p>
+  </section>
+  <section class="card">
+    <h3>৩. কী করতে পারে?</h3>
+    <p>✓ ভিডিওর স্ক্রিপ্টের জন্য বিস্তারিত প্রম্পট তৈরি</p>
+    <p>✓ দৃশ্যভিত্তিক ফুটেজ/ছবির ধারণা ও সময় ভাগ</p>
+    <p>✓ অন-স্ক্রিন বাংলা লেখা, সাউন্ড ও এডিটিং নির্দেশনা</p>
+    <p class="hint">নোট: এটি নিজে ভিডিও রেন্ডার বা AI ভয়েস তৈরি করে না। এটি বিনামূল্যের পরিকল্পনা-টুল; AI ফল পেতে Gemini বা অন্য AI পরিষেবা ব্যবহার করতে হবে।</p>
+  </section>
+  <footer>CineAI Studio • একটি সহজ, বিনামূল্যের ভিডিও-পরিকল্পনা টুল</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+function buildPrompt(){
+ const topic=$('topic').value.trim()||'একটি আকর্ষণীয় বাংলা ভিডিও';
+ const duration=$('duration').value,type=$('type').value,voice=$('voice').value,visual=$('visual').value,audience=$('audience').value.trim()||'বাংলাভাষী দর্শক',notes=$('notes').value.trim();
+ return `তুমি একজন অভিজ্ঞ বাংলা YouTube ভিডিও-প্রযোজক ও স্ক্রিপ্টরাইটার। আমার জন্য একটি সম্পূর্ণ ভিডিও তৈরির পরিকল্পনা তৈরি করো।\n\nভিডিওর বিষয়: ${topic}\nদৈর্ঘ্য: ${duration}\nধরন: ${type}\nভয়েস: ${voice}\nভিজ্যুয়াল স্টাইল: ${visual}\nটার্গেট দর্শক: ${audience}\nঅতিরিক্ত নির্দেশনা: ${notes||'সহজ, স্বাভাবিক বাংলা ব্যবহার করো; অপ্রমাণিত তথ্য বানিয়ে লিখবে না।'}\n\nআউটপুট এই ক্রমে দাও:\n১. আকর্ষণীয় ৩টি শিরোনাম ও একটি থাম্বনেইল টেক্সট\n২. প্রথম ১০ সেকেন্ডের শক্তিশালী হুক\n৩. সম্পূর্ণ দৈর্ঘ্য অনুযায়ী বাংলা ভয়েসওভার স্ক্রিপ্ট\n৪. প্রতিটি দৃশ্যের সময়, ভিজ্যুয়াল/ফুটেজের বর্ণনা এবং Pexels-এ খোঁজার ইংরেজি সার্চ শব্দ\n৫. পর্দায় দেখানোর বাংলা লেখা\n৬. ব্যাকগ্রাউন্ড মিউজিক ও সাউন্ড ইফেক্টের পরামর্শ\n৭. মোবাইল CapCut-এ কাট, জুম, ট্রানজিশন ও সাবটাইটেল এডিটিং নির্দেশনা\n৮. YouTube বর্ণনা, হ্যাশট্যাগ ও আপলোডের আগে চেকলিস্ট\n\nসময় ভাগগুলো যেন মোট ${duration}-এর সঙ্গে মেলে। সহজে অনুসরণ করা যায় এমনভাবে লিখবে।`;
+}
+$('make').addEventListener('click',()=>{$('result').textContent=buildPrompt();$('status').textContent='প্রম্পট তৈরি হয়েছে। এখন কপি করতে পারো।';});
+$('copy').addEventListener('click',async()=>{const txt=$('result').textContent;if(!txt||txt==='এখানে তোমার প্রম্পট দেখা যাবে।'){$('result').textContent=buildPrompt();}try{await navigator.clipboard.writeText($('result').textContent);$('status').textContent='কপি হয়েছে! এখন Gemini-তে পেস্ট করো।';}catch(e){$('status').textContent='স্বয়ংক্রিয় কপি কাজ করেনি। প্রম্পটের লেখা চেপে ধরে কপি করো।';}});
+$('gemini').addEventListener('click',()=>window.open('https://gemini.google.com/','_blank','noopener'));
+$('reset').addEventListener('click',()=>{$('topic').value='';$('duration').value='৬ মিনিট';$('type').selectedIndex=0;$('voice').selectedIndex=0;$('visual').selectedIndex=0;$('audience').value='';$('notes').value='';$('result').textContent='এখানে তোমার প্রম্পট দেখা যাবে।';$('status').textContent='';});
+</script>
+</body>
+</html>
